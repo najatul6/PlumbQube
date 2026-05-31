@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  FaSearch,
-  FaHotTub,
-  FaPumpSoap,
-  FaTools,
-} from "react-icons/fa";
+import { FaSearch, FaHotTub, FaPumpSoap, FaTools } from "react-icons/fa";
 
 import { fadeUp } from "../utils/animation";
 import EmergencyBanner from "../components/common/EmergencyBanner";
@@ -154,7 +149,7 @@ const ServiceCard = ({ service }) => {
 const Services = () => {
   return (
     <section className="bg-neutral-200 py-20 px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-360 mx-auto">
         {/* heading */}
         <motion.div {...fadeUp} className="mb-14">
           <h2 className="text-4xl md:text-5xl font-bold text-black">
@@ -183,8 +178,8 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
-          {/* emergency banner */}
-        <EmergencyBanner/>
+        {/* emergency banner */}
+        <EmergencyBanner />
       </div>
     </section>
   );

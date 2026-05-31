@@ -67,13 +67,13 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full z-50 border-b border-gray-200 transition-all duration-300 ${
+      className={`w-full px-4 z-50 border-b border-gray-200 transition-all duration-300 ${
         sticky
           ? "fixed top-0 left-0 bg-white shadow-lg animate__animated animate__fadeInDown"
           : "absolute top-0 left-0"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+      <nav className="max-w-360 mx-auto md:px-8 lg:px-0 py-4 flex items-center justify-between">
         {/* logo */}
         <div>
             <Link to="/">

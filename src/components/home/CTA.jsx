@@ -5,10 +5,10 @@ import { fadeUp } from "../../utils/animation";
 
 const CTA = () => {
   return (
-    <section className="bg-neutral-200 px-4 md:px-8 pt-20">
+    <section className="bg-neutral-200 px-4 md:px-8 py-20">
       <motion.div
         {...fadeUp}
-        className="max-w-7xl mx-auto border border-gray-300 bg-neutral-200 relative overflow-hidden"
+        className="max-w-360 mx-auto border border-gray-300 bg-neutral-200 relative overflow-hidden"
       >
         {/* watermark icon */}
         <FaTools className="absolute right-10 top-1/2 -translate-y-1/2 text-[180px] text-black/5 rotate-12 hidden md:block" />
