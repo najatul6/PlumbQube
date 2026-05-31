@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { HiMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
+import "animate.css";
 import Button from "./Button";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [sticky, setSticky] = useState(false);
   const menuRef = useRef(null);
-
+  const navigate = useNavigate();
   const navItems = [
     {
       name: "Home",
@@ -26,8 +28,8 @@ const Navbar = () => {
       path: "/contact",
     },
     {
-      name: "Portal",
-      path: "/portal",
+      name: "Dashboard",
+      path: "/dashboard",
     },
   ];
 
@@ -46,14 +48,39 @@ const Navbar = () => {
     };
   }, []);
 
+  // sticky navbar after scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-200">
+    <header
+      className={`w-full z-50 border-b border-gray-200 transition-all duration-300 ${
+        sticky
+          ? "fixed top-0 left-0 bg-white shadow-lg animate__animated animate__fadeInDown"
+          : "absolute top-0 left-0"
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
         {/* logo */}
         <div>
-          <h1 className="text-2xl md:text-3xl font-bold text-primary-200">
-            PlumbQube
-          </h1>
+            <Link to="/">
+              <h1 className="text-2xl md:text-3xl font-bold text-primary-200">
+                PlumbQube
+              </h1>
+            </Link>
         </div>
 
         {/* desktop nav links */}
@@ -80,8 +107,10 @@ const Navbar = () => {
         </div>
 
         {/* desktop button */}
-        <div className="hidden md:block">
-          <Button btnName={"Request Service"} />
+        <div className="hidden md:block animate__animated animate__fadeInRight">
+          <div className="hover:scale-105 transition-all duration-300">
+            <Button btnName={"Request Service"} onClick={() => navigate("/request-service")} />
+          </div>
         </div>
 
         {/* mobile menu button */}
@@ -97,7 +126,7 @@ const Navbar = () => {
           ref={menuRef}
           className={`absolute left-0 top-20 w-full md:hidden transition-all duration-300 origin-top ${
             open
-              ? "opacity-100 visible scale-y-100"
+              ? "opacity-100 visible scale-y-100 animate__animated animate__fadeInDown"
               : "opacity-0 invisible scale-y-95"
           }`}
         >
@@ -121,8 +150,10 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              <div className="mt-4">
-                <Button btnName={"Request Service"} />
+              <div className="mt-4 animate__animated animate__fadeInUp">
+                <div className="hover:scale-105 transition-all duration-300">
+                  <Button btnName={"Request Service"} onClick={() => navigate("/request-service")} />
+                </div>
               </div>
             </div>
           </div>
