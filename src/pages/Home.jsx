@@ -6,7 +6,7 @@ import WhyChooseUs from "../components/home/WhyChooseUse";
 
 const Home = () => {
   return (
-    <div className="my-16 md:my-18">
+    <div className="mt-16 md:mt-18">
       {/* hero section */}
       <Hero />
       {/* why choose us */}

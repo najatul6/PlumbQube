@@ -13,17 +13,15 @@ const Contact = () => {
     reset();
   };
 
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  iconUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  shadowUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-});
+  L.Icon.Default.mergeOptions({
+    iconRetinaUrl:
+      "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+    iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+    shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  });
   return (
     <section className="bg-neutral-200 py-20 px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+      <div className="max-w-360 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* form */}
         <motion.div {...fadeLeft}>
           <h2 className="text-5xl font-bold text-black">Inquire With Us</h2>
