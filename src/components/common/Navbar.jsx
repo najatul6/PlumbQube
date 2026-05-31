@@ -52,7 +52,7 @@ const Navbar = () => {
         {/* logo */}
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-primary-200">
-            PlumberQube
+            PlumbQube
           </h1>
         </div>
 
