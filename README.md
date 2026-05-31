@@ -1,16 +1,86 @@
-# React + Vite
+# PlumbQube
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern plumbing service landing page built with React and Vite. PlumbQube features an animated marketing site, service catalog, booking flow, contact map, and reusable component-driven layout.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive React + Vite frontend
+- Tailwind CSS + DaisyUI styling
+- Animated page transitions with Framer Motion
+- React Router v7 navigation for Home, Services, About, Contact, and Request Service
+- Multi-step booking form using React Hook Form
+- Interactive Leaflet map on the contact page
+- Reusable components for Navbar, Footer, service cards, testimonials, and emergency CTA
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Tailwind CSS 4
+- DaisyUI
+- React Router
+- Framer Motion
+- React Hook Form
+- React Leaflet + Leaflet
+- React Icons
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/main.jsx` - App entry point and `RouterProvider`
+- `src/routes/Router.jsx` - Route definitions and app routing
+- `src/layouts/MainLayout.jsx` - Shared layout with `Navbar`, animated `Outlet`, and `Footer`
+- `src/pages/` - Page views for `Home`, `Services`, `About`, `Contact`, and fallback routes
+- `src/components/` - Reusable UI blocks, booking form components, tiles, cards, and layout helpers
+- `src/utils/animation.js` - Motion variants used across pages
+
+## Pages
+
+- `/` - Home landing page with hero, services, testimonials, and CTA
+- `/services` - Services catalog and pricing cards
+- `/about` - Company story, values, and team overview
+- `/contact` - Contact form with a Leaflet map and location details
+- `/request-service` - Multi-step plumbing booking form
+- `/dashboard` - Dashboard route placeholder
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Locally
+
+```bash
+npm run dev
+```
+
+Open the URL shown in your terminal, typically `http://localhost:5173`.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Notes
+
+- `src/App.jsx` still contains template example code and is not used by the router-based app.
+- The app uses a floating `CallButton` and animated route transitions via `MainLayout`.
+- Leaflet icons are loaded dynamically in `src/pages/Contact.jsx`.
+
+## License
+
+This project is currently private and configured for local development.
