@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  FaAward,
-  FaTools,
-} from "react-icons/fa";
+import { FaAward, FaTools } from "react-icons/fa";
 import engImg from "../assets/images/engineer.png";
 import legacyImg from "../assets/images/legacy.png";
 import { fadeLeft, fadeRight, fadeUp } from "../utils/animation";
@@ -10,7 +7,7 @@ import { fadeLeft, fadeRight, fadeUp } from "../utils/animation";
 const About = () => {
   return (
     <section className="bg-neutral-200 py-20 px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto space-y-24">
+      <div className="max-w-360 mx-auto space-y-24">
         {/* HERO */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* left */}
@@ -20,10 +17,10 @@ const About = () => {
             </h1>
 
             <p className="mt-6 text-gray-600 leading-relaxed text-lg">
-              At PlumbQube Expertise, we don't just fix pipes; we engineer
-              smart solutions for your home's infrastructure. Our story began
-              with a simple mission: to bring technical rigor and corporate-
-              level reliability to the local plumbing trade.
+              At PlumbQube Expertise, we don't just fix pipes; we engineer smart
+              solutions for your home's infrastructure. Our story began with a
+              simple mission: to bring technical rigor and corporate- level
+              reliability to the local plumbing trade.
             </p>
 
             <div className="flex flex-wrap gap-3 mt-8">
@@ -107,9 +104,7 @@ const About = () => {
               <FaTools className="text-5xl text-white/70" />
 
               <div>
-                <h3 className="text-3xl font-bold mt-10">
-                  Quality First
-                </h3>
+                <h3 className="text-3xl font-bold mt-10">Quality First</h3>
 
                 <p className="text-gray-200 mt-4 leading-relaxed">
                   Every fitting, every joint, and every seal is checked twice.
@@ -139,9 +134,7 @@ const About = () => {
             >
               <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
                 <div>
-                  <h3 className="text-3xl font-bold">
-                    Meet the Team
-                  </h3>
+                  <h3 className="text-3xl font-bold">Meet the Team</h3>
 
                   <p className="mt-4 text-gray-600 leading-relaxed max-w-2xl">
                     Our technicians are more than laborers; they are certified

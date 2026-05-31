@@ -46,7 +46,7 @@ const BookingForm = () => {
 
   return (
     <section className="bg-neutral-200 py-20 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-360 mx-auto">
         {/* heading */}
         <div className="mb-10">
           <h2 className="text-4xl font-bold text-primary-200">

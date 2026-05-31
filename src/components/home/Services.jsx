@@ -33,8 +33,8 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-neutral-200 py-20 px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-neutral-200 pb-20 px-4 md:px-8 overflow-hidden">
+      <div className="max-w-360 mx-auto">
         {/* heading */}
         <motion.div
           {...fadeUp}

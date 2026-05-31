@@ -4,17 +4,12 @@ import { LuClock3 } from "react-icons/lu";
 
 import supportImg from "../../assets/images/support.png";
 
-import {
-  fadeLeft,
-  fadeRight,
-  fadeUp,
-  scaleUp,
-} from "../../utils/animation";
+import { fadeLeft, fadeRight, fadeUp, scaleUp } from "../../utils/animation";
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-neutral-200 py-20 px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-neutral-200 pt-20 pb-12 px-4 md:px-8 overflow-hidden">
+      <div className="max-w-360 mx-auto">
         {/* section heading */}
         <motion.div {...fadeUp} className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-200">
@@ -113,9 +108,7 @@ const WhyChooseUs = () => {
           className="mt-8 bg-primary-200 text-white px-8 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 overflow-hidden"
         >
           <div>
-            <h3 className="text-3xl font-bold mb-4">
-              Our Quality Guarantee
-            </h3>
+            <h3 className="text-3xl font-bold mb-4">Our Quality Guarantee</h3>
 
             <p className="text-lg text-gray-100 leading-relaxed max-w-2xl">
               We stand behind our craftsmanship. If the repair doesn't meet our

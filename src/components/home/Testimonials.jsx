@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { fadeUp } from "../../utils/animation";
+import TestimonialCard from "../common/TestimonialCard";
 
 const testimonials = [
   {
@@ -43,49 +44,10 @@ const testimonials = [
   },
 ];
 
-const TestimonialCard = ({ testimonial }) => {
-  return (
-    <motion.div
-      whileHover={{
-        y: -8,
-      }}
-      transition={{ duration: 0.3 }}
-      className="bg-white/5 border border-white/10 p-8 min-h-90 backdrop-blur-sm hover:border-primary-200 transition duration-300"
-    >
-      {/* stars */}
-      <div className="flex items-center gap-2 mb-8">
-        {[...Array(5)].map((_, idx) => (
-          <FaStar key={idx} className="text-yellow-400 text-lg" />
-        ))}
-      </div>
-
-      {/* review */}
-      <p className="text-white italic text-xl leading-relaxed mb-12">
-        "{testimonial.review}"
-      </p>
-
-      {/* user */}
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-xl bg-primary-200 flex items-center justify-center text-white font-bold text-lg">
-          {testimonial.initials}
-        </div>
-
-        <div>
-          <h4 className="text-white text-xl font-semibold">
-            {testimonial.name}
-          </h4>
-
-          <p className="text-gray-400 text-sm">{testimonial.role}</p>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
 const Testimonials = () => {
   return (
     <section className="bg-[#08131D] py-24 px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-360 mx-auto">
         {/* top */}
         <motion.div
           {...fadeUp}
@@ -103,11 +65,11 @@ const Testimonials = () => {
 
           {/* arrows */}
           <div className="flex items-center gap-4">
-            <button className="testimonial-prev w-14 h-14 border border-white/20 text-white flex items-center justify-center hover:bg-primary-200 hover:border-primary-200 transition duration-300">
+            <button className="testimonial-prev w-14 h-14 border border-white/20 text-white flex items-center justify-center hover:bg-primary-200 hover:border-primary-200 transition duration-300 cursor-pointer">
               <FaChevronLeft />
             </button>
 
-            <button className="testimonial-next w-14 h-14 border border-white/20 text-white flex items-center justify-center hover:bg-primary-200 hover:border-primary-200 transition duration-300">
+            <button className="testimonial-next w-14 h-14 border border-white/20 text-white flex items-center justify-center bg-primary-200 hover:border-primary-200 transition duration-300 cursor-pointer">
               <FaChevronRight />
             </button>
           </div>
