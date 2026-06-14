@@ -13,7 +13,7 @@ const About = () => {
           {/* left */}
           <motion.div {...fadeLeft}>
             <h1 className="text-5xl md:text-6xl font-bold text-black leading-tight">
-              Engineered for Precision, Built on Trust.
+              Engineered for Plumb Qube, Built on Trust.
             </h1>
 
             <p className="mt-6 text-gray-600 leading-relaxed text-lg">
