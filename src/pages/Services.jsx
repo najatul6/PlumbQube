@@ -153,7 +153,7 @@ const Services = () => {
         {/* heading */}
         <motion.div {...fadeUp} className="mb-14">
           <h2 className="text-4xl md:text-5xl font-bold text-black">
-            Precision Plumbing Services
+            Plumb Qube Services
           </h2>
 
           <p className="mt-4 text-gray-600 max-w-3xl leading-relaxed">
