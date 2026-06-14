@@ -99,9 +99,9 @@ const Footer = () => {
               </h3>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                123 Industrial Parkway
+                Your
                 <br />
-                Plumbing Heights, PL 90210
+                Location
               </p>
 
               <div className="flex items-center gap-5 mt-8">
