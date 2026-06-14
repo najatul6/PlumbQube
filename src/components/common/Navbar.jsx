@@ -27,10 +27,10 @@ const Navbar = () => {
       name: "Contact",
       path: "/contact",
     },
-    {
-      name: "Dashboard",
-      path: "/dashboard",
-    },
+    // {
+    //   name: "Dashboard",
+    //   path: "/dashboard",
+    // },
   ];
 
   // onblur handler to close the menu when clicking outside
